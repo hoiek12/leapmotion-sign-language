@@ -104,6 +104,7 @@ public class SignListner extends Listener{
 	public void onFrame (Controller controller)
 	{
 		if(controller.frame().id()%3==1)
+		
 		current_state=svm.svm_predict(model, HandtoNode(controller.frame().hands().get(0)));
 		System.out.println(current_state);
 	}
